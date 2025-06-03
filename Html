@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Encuesta ILE Beauty</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4ede8;
+      padding: 20px;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      text-align: center;
+    }
+
+    form {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .question {
+      margin: 20px 0 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .options {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .option {
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .option input {
+      display: none;
+    }
+
+    .option img {
+      width: 80px;
+      border: 3px solid transparent;
+      border-radius: 8px;
+      padding: 3px;
+    }
+
+    .option input:checked + img {
+      border-color: #c06f98;
+    }
+
+    .categories {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 30px;
+    }
+
+    .categories label {
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .categories input {
+      display: none;
+    }
+
+    .categories img {
+      width: 80px;
+      border: 3px solid transparent;
+      border-radius: 8px;
+      padding: 3px;
+    }
+
+    .categories input:checked + img {
+      border-color: #c06f98;
+    }
+
+    .skincare-products {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .colorimetry {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .suggestion-box {
+      margin-top: 30px;
+    }
+
+    textarea {
+      width: 100%;
+      border-radius: 5px;
+      padding: 10px;
+    }
+
+    .feedback {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .feedback label {
+      margin: 0 20px;
+      cursor: pointer;
+    }
+
+    .feedback input {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ILE Beauty - Encuesta para Tips Personalizados</h1>
+  </header>
+
+  <form>
+    <!-- Color de cabello -->
+    <div class="question">¿Cuál es tu color de cabello?</div>
+    <div class="options">
+      <label class="option">
+        <input type="radio" name="cabello" value="negro" />
+        <img src="https://i.imgur.com/LjTQv4b.png" alt="Cabello Negro" />
+        <div>Negro</div>
+      </label>
+      <label class="option">
+        <input type="radio" name="cabello" value="rubio" />
+        <img src="https://i.imgur.com/v1JbzrV.png" alt="Cabello Rubio" />
+        <div>Rubio</div>
+      </label>
+      <label class="option">
+        <input type="radio" name="cabello" value="cafe" />
+        <img src="https://i.imgur.com/JTHGEue.png" alt="Cabello Café" />
+        <div>Café</div>
+      </label>
+      <label class="option">
+        <input type="radio" name="cabello" value="otro" />
+        <img src="https://i.imgur.com/OZsXB3E.png" alt="Otro" />
+        <div>Otro</div>
+      </label>
+    </div>
+
+    <!-- Tipo de ojos -->
+    <div class="question">¿Qué tipo de ojos tienes?</div>
+    <div class="options">
+      <label class="option">
+        <input type="radio" name="ojos" value="redondos" />
+        <img src="https://i.imgur.com/4MGyoRj.png" alt="Ojos Redondos" />
+        <div>Redondos</div>
+      </label>
+      <label class="option">
+        <input type="radio" name="ojos" value="almendrados" />
+        <img src="https://i.imgur.com/yD2n4Xa.png" alt="Ojos Almendrados" />
+        <div>Almendrados</div>
+      </label>
+      <label class="option">
+        <input type="radio" name="ojos" value="pequeños" />
+        <img src="https://i.imgur.com/XW4Nqzj.png" alt="Ojos Pequeños" />
+        <div>Pequeños</div>
+      </label>
+    </div>
+
+    <!-- Color de piel -->
+    <div class="question">¿Cuál es tu tono de piel?</div>
+    <img src="https://i.imgur.com/DNNBOzz.png" alt="Color de piel" width="300" style="display: block; margin: 0 auto;" />
+    <div class="options">
+      <label class="option">
+        <input type="radio" name="piel" value="morena" />
+        <div>Morena</div>
+      </label>
+      <label class="option">
+        <input type="radio" name="piel" value="blanca" />
+        <div>Blanca</div>
+      </label>
+      <label class="option">
+        <input type="radio" name="piel" value="intermedia" />
+        <div>Intermedia</div>
+      </label>
+    </div>
+
+    <!-- Categorías de interés -->
+    <div class="question">¿Qué categoría te interesa más?</div>
+    <div class="categories">
+      <label>
+        <input type="radio" name="categoria" value="pelo" />
+        <img src="https://i.imgur.com/zIZmZPW.png" alt="Pelo" />
+        <div>Pelo</div>
+      </label>
+      <label>
+        <input type="radio" name="categoria" value="maquillaje" />
+        <img src="https://i.imgur.com/W0Y9TPb.png" alt="Maquillaje" />
+        <div>Maquillaje</div>
+      </label>
+      <label>
+        <input type="radio" name="categoria" value="vestimenta" />
+        <img src="https://i.imgur.com/5RrAXVK.png" alt="Vestimenta" />
+        <div>Vestimenta</div>
+      </label>
+    </div>
+
+    <!-- Skincare Tips -->
+    <div class="question">Se proporciona una rutina de la cara (skincare) de día y noche</div>
+    <div class="skincare-products">
+      <div>
+        <img src="https://i.imgur.com/Z79y9zN.png" alt="Mascarillas" />
+        <p>Mascarillas</p>
+      </div>
+      <div>
+        <img src="https://i.imgur.com/rzPQGHu.png" alt="Crema" />
+        <p>Crema</p>
+      </div>
+      <div>
+        <img src="https://i.imgur.com/sQa9H5q.png" alt="Serum" />
+        <p>Serum</p>
+      </div>
+      <div>
+        <img src="https://i.imgur.com/1NxqevP.png" alt="Jabones" />
+        <p>Jabones</p>
+      </div>
+    </div>
+
+    <!-- Colorimetría -->
+    <div class="question">Te ayudamos a encontrar tu colorimetría</div>
+    <div class="colorimetry">
+      <img src="https://i.imgur.com/x8LjcZx.png" alt="Paleta de colores" />
+      <div>
+        <p>Si usas un vestido rojo, usa zapatos blancos</p>
+        <p>Si te da miedo usar sombras, te ayudamos a la combinación de colores o técnicas</p>
+      </div>
+    </div>
+
+    <!-- Tendencias -->
+    <div class="question">Tendencias</div>
+    <div class="options">
+      <label class="option">
+        <input type="radio" name="tendencia" value="natural" />
+        <img src="https://i.imgur.com/0rGfA7U.png" alt="Look Natural" />
+        <div>Look Natural</div>
+      </label>
+      <label class="option">
+        <input type="radio" name="tendencia" value="glam" />
+        <img src="https://i.imgur.com/KkQ4oXN.png" alt="Maquillaje Glam" />
+        <div>Maquillaje Glam</div>
+      </label>
+      <label class="option">
+        <input type="radio" name="tendencia" value="casual" />
+        <img src="https://i.imgur.com/90mrmWy.png" alt="Casual Chic" />
+        <div>Casual Chic</div>
+      </label>
+      <label class="option">
+        <input type="radio" name="tendencia" value="colorblock" />
+        <img src="https://i.imgur.com/7TV0jeS.png" alt="Color Block" />
+        <div>Color Block</div>
+      </label>
+    </div>
+
+    <!-- Sugerencias -->
+    <div class="suggestion-box">
+      <h3>Ventana de sugerencias</h3>
+      <textarea name="sugerencias" rows="4" placeholder="Escribe tus comentarios aquí..."></textarea>
+      <div class="feedback">
+        <label><input type="radio" name="feedback" value="me-gustan" /> ✅ Me gustan los tips, son buenos</label>
+        <label><input type="radio" name="feedback" value="no-gustan" /> ❌ No me gusta las combinaciones</label>
+      </div>
+    </div>
+
+    <!-- Botón para enviar (no funcional sin backend) -->
+    <div style="text-align: center; margin-top: 30px;">
+      <button type="submit" style="padding: 10px 20px; font-size: 16px; background-color: #c06f98; color: white; border: none; border-radius: 5px;">
+        Enviar respuestas
+      </button>
+    </div>
+  </form>
+</body>
+</html>
